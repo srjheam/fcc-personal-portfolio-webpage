@@ -1,3 +1,10 @@
+:root {
+    --background-dark1: #202733;
+    --background-dark2: #2B3443;
+    --background-dark3: #1F365C;
+    --accent-color: #31558F;
+}
+
 *,
 ::before,
 ::after {
@@ -12,6 +19,10 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: var(--background-dark1);
 }
 
 header {
