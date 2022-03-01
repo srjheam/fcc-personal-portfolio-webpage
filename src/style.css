@@ -399,6 +399,7 @@ h2::before {
     position: relative;
     margin: 0 0 8px;
     color: var(--text-color1);
+    font-size: 1.2em;
     font-weight: 500;
 }
 
@@ -419,6 +420,7 @@ h2::before {
 
 .projects-card-info p {
     margin: 0 0 16px;
+    font-size: 1em;
     color: var(--text-color2);
 }
 
