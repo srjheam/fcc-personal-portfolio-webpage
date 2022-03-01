@@ -393,6 +393,7 @@ h2::before {
 .projects-card:hover .projects-card-info, .projects-card:active .projects-card-info {
     margin: 0;
     transform: translateY(-100%);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.6);
 }
 
 .projects-card-title {
