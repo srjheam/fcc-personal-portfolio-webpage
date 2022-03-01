@@ -155,10 +155,33 @@ h2::before {
 
 .welcome-role {
     display: block;
+    position: relative;
     
     font-size: 1.2em;
     
     color: var(--accent-color);
+}
+
+.welcome-role::before {
+    content: '<';
+    position: absolute;
+    transform: translateX(-100%);
+    color: #F2873A;
+    opacity: 0;
+    transition: .25s;
+}
+
+.welcome-role::after {
+    content: '/>';
+    position: absolute;
+    margin-left: 16px;
+    color: #F2873A;
+    opacity: 0;
+    transition: .25s;
+}
+
+.welcome-role:hover::before, .welcome-role:active::before, .welcome-role:hover::after, .welcome-role:active::after {
+    opacity: 1;
 }
 
 .welcome-about-me p {
@@ -426,13 +449,20 @@ h2::before {
         place-items: center center;
         gap: 32px;
         
-        max-width: 360px;
-        
         padding-top: 48px;
 
         text-align: center;
     }
     
+    div.welcome-about-me h1 {
+        font-size: 1.8em;
+        overflow: hidden;
+    }
+
+    span.welcome-role::after {
+        margin: 0;
+    }
+
     div.welcome-about-me p {
         text-align: justify;
         hyphens: auto;
