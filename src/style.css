@@ -70,6 +70,31 @@ h2::before {
     border: 2px solid var(--accent-color);
 }
 
+.link-anibackground {
+    display: inline-block;
+    position: relative;
+}
+
+.link-anibackground::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 65%;
+    bottom: 2px;
+    left: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transform-origin: bottom left;
+    transition: transform 250ms ease-out;
+    opacity: .6;
+}
+
+.link-anibackground:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .section {
     padding: 64px 8px;
 }
@@ -303,6 +328,7 @@ h2::before {
 
 .projects-card:hover img, .projects-card:active img {
     transform: scale(1.2) translateY(-8.3%);
+    filter: blur(4px) saturate(100%);
 }
 
 .projects-card-info {
@@ -319,9 +345,25 @@ h2::before {
 }
 
 .projects-card-title {
+    position: relative;
     margin: 0 0 8px;
     color: var(--text-color1);
     font-weight: 500;
+}
+
+.projects-card-title::after {
+    content: '\f08e';
+    position: absolute;
+    top: 0;
+    margin: 4px 0px 0px 4px;
+    font: normal normal .6em FontAwesome;
+    text-decoration: none;
+    opacity: 0;
+    transition: .25s;
+}
+
+.projects-card-title:hover::after {
+    opacity: 1;
 }
 
 .projects-card-info p {
