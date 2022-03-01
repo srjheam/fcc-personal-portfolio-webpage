@@ -46,6 +46,14 @@ header {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 #navbar {
     display: flex;
     place-items: center center;
