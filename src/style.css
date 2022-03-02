@@ -475,8 +475,13 @@ h2::before {
         overflow: hidden;
     }
 
-    span.welcome-role::after {
-        margin: 0;
+    span.welcome-role {
+        transition: .25s;
+    }
+
+    span.welcome-role:hover {
+        /* centers smoothly by being able to use transition  */
+        transform: translateX(-14.5px);
     }
 
     div.welcome-about-me p {
